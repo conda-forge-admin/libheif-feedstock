@@ -12,7 +12,11 @@ source:
   sha256: 8bd5d41d19dc84536d118b04774709f244df6104ef66d623dad5fa4650143405
 
 build:
-  number: 1
+  # Keep the GPL variant preferred while incrementing both existing builds.
+  number: ${{ 102 if license_family == "gpl" else 2 }}
+  # dav1d-devel is not built for PPC64LE after dav1d's v1/split migration.
+  skip:
+    - ppc64le
   string: ${{ license_family }}_h${{ hash }}_${{ build_number }}
 
 requirements:
