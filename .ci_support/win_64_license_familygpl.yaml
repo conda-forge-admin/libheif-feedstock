@@ -8,8 +8,8 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2022
-dav1d:
-- 1.2.1
+dav1d_devel:
+- 1.5.4
 libavif:
 - '1'
 license_family:
