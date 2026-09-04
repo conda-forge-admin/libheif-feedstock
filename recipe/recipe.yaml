@@ -16,9 +16,6 @@ source:
 build:
   # Keep the GPL variant preferred while sharing one rebuild counter.
   number: ${{ build_number + (100 if license_family == "gpl" else 0) }}
-  # dav1d-devel is not built for PPC64LE after dav1d's v1/split migration.
-  skip:
-    - ppc64le
   string: ${{ license_family }}_h${{ hash }}_${{ build_number }}
 
 requirements:
