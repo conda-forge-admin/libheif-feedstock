@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.23.3"
+  version: "1.23.4"
   # Reset this to 0 for each upstream release; increment it for recipe rebuilds.
   build_number: 0
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/strukturag/libheif/releases/download/v${{ version }}/libheif-${{ version }}.tar.gz
-  sha256: 11c1179e0e4bec33624b87f22ec42c1e993a40d946d44d26f9c431cf1456a863
+  sha256: d0c02b4b0e978f34a1974b6f3eea7975a537bf7a9195ffeea38e7242ff316fdd
 
 build:
   # Keep the GPL variant preferred while sharing one rebuild counter.
